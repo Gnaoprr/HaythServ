@@ -1,0 +1,14 @@
+Usage:
+        #stats [cn] [total | monthly | weekly | daily]
+Author:
+        HopMod / SuckerServ
+Description:
+        Shows stats for a client over the wished time
+Examples:
+        #stats 1 total          Displays the total stats for player with client number 1.
+Options:
+        [cn]                    The CN of the player who you want to get the stats of.
+        [total]                 Displays stats for the player in all his/her games.
+        [monthly]               Displays the stats in this month.
+        [weekly]                Displays the stats only in this week.
+        [daily]                 Displays the stats for all the player's games today.
