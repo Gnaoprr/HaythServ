@@ -67,7 +67,7 @@ global server_root_password ""
 
 global web_admins []
 
-global mute_triggers [nigger nigga negro kike faggot motherfucker jude wichser kanake polake kinderficker "scheiss auslaender" dumbass ]
+global mute_triggers [ nigger nigga negro kike faggot motherfucker jude wichser wixer wixxer kanake polake kinderficker "scheiss auslaender" "scheiß ausländer" dumbass bastard retard stronzo ritardato coglione ]
 
 global saveconf_vars [saveconf_vars servername motd maxclients admin_password master_password]
 
@@ -80,7 +80,7 @@ global allow_setmaster 0
 
 global irc_socket_password ""
 
-global ban_lists [
---    "http://hopmod.googlecode.com/svn/data/bans.json"
-]
+#global ban_lists [
+#    "http://hopmod.googlecode.com/svn/data/bans.json"
+#]
 

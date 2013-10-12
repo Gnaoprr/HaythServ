@@ -1,0 +1,8 @@
+Usage:
+        #register username admin
+Author:
+        ~Haytham
+Description:
+        Creates an account to use with #login.
+Examples:
+        #register a b            Registers user a with password b.

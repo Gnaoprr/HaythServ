@@ -24,6 +24,44 @@ local function sendServerBanner(cn)
     end)
 end
 
+local function explode(div,str)
+    if (div=='') then return false end
+    local pos,arr = 0,{}
+    for st,sp in function() return string.find(str,div,pos,true) end do
+        table.insert(arr,string.sub(str,pos,st-1))
+        pos = sp + 1
+    end
+    table.insert(arr,string.sub(str,pos))
+    return arr
+end
+
+--[[local function checkLogin(cn, firstcheck)
+    if firstcheck then
+        local accounts = {}
+        local account  = {}
+        local line     = ""
+        local f = io.open("accounts.txt", "r")
+        for _ in io.lines("accounts.txt") do
+            line = f:read()
+            accounts[#accounts+1] = explode(" ", line)
+        end
+        f:close()
+        for item,_ in pairs(accounts) do
+            for _item,__ in pairs(_) do
+                if __ == server.player_displayname(cn) then
+                    found = 1
+                    account = accounts[item]
+                end
+            end
+        end
+        if account and found then
+            server.player_msg(cn, string.format("\f3>>> \f0%s\f4, you are using a reserved name \f5(%s)\f4, you have 20 seconds to verify or change name.", server.player_displayname(cn), account[1]))
+        end
+    else
+        -- :|
+    end
+end]]
+
 local function onConnect(cn, is_spy)
 
     if is_spy or server.is_bot(cn) then return end
@@ -31,7 +69,7 @@ local function onConnect(cn, is_spy)
     local country = geoip.ip_to_country(server.player_ip(cn))
     local city = geoip.ip_to_city(server.player_ip(cn))
     if not city or #city < 1 then city = "Unknown" end
-    
+
     if show_country_message and #country > 0 then
 
         if server.player_ranking then 
@@ -55,6 +93,8 @@ local function onConnect(cn, is_spy)
             server.player_msg(cn, message)
         end
     end
+    -- checkLogin(cn, 1)
+    -- server.sleep(20000, checkLogin(cn), 0)
 end
 
 server.event_handler("connect",onConnect)

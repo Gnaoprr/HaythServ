@@ -1,0 +1,8 @@
+Usage:
+        #login username admin
+Author:
+        ~Haytham
+Description:
+        Verifies to the server and sets privileges (if account has some).
+Examples:
+        #login a b               Tries to login as a with password b.
