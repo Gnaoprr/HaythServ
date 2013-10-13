@@ -1,6 +1,6 @@
 -- HaythServ Login System
 -- Copyright (C) 2012        Jed
--- Copyright (C) 2012-2013   Rodney "~Haytham" Jackson
+-- Copyright (C) 2012-2013   ~Haytham
 
 -- Changelog:
 -- 2012: First release by Jed

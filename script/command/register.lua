@@ -1,5 +1,5 @@
 -- HaythServ Login System
--- Copyright (C) 2013   Rodney "~Haytham" Jackson
+-- Copyright (C) 2013   ~Haytham
 
 -- Changelog:
 -- 2013: Added this register script for the HSLS
@@ -44,4 +44,5 @@ return function(cn, username, password)
 	_f:write(string.format("%s %s none\n", username, password))
 	_f:close()
 	server.player_msg(cn, string.format("\f3>>> \f4Your account has been succsessfully created, wait for an admin to approve it.", username, password))
+    -- Approve accounts by #reload - I'll do a fix for this soon.
 end
